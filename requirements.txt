@@ -1,5 +1,8 @@
 numpy
 pandas
-tqdm
-mp-api
-pymatgen
+scikit-learn
+matplotlib
+seaborn
+lightgbm
+xgboost
+joblib

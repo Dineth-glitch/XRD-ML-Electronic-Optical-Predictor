@@ -1,35 +1,24 @@
-# XRD Feature Extraction (Materials Project)
+# ML Models for Materials Properties
 
-This project extracts fixed-length X-ray diffraction (XRD) feature vectors from crystal structures using the Materials Project API.
+This repository contains ML models for:
 
-## Features
-- Fetches structures using `mp-api`
-- Generates XRD patterns using `pymatgen`
-- Converts variable-length patterns into fixed 8192-length vectors
-- Saves features as `.npy` file for ML models
+- Formation Energy Prediction (LightGBM)
+- Bandgap Prediction (XGBoost)
+- Refractive Index Prediction (Random Forest)
 
 ## Setup
-
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
-
-1. Add your Materials Project API key in the script:
-```python
-API_KEY = "YOUR_MATERIALS_PROJECT_API_KEY"
-```
-
-2. Run:
+## Run
 ```bash
-python xrd_feature_extraction.py
+python formation_energy_model.py
+python bandgap_model.py
+python refractive_index_model.py
 ```
 
 ## Output
-- `xrd_features.npy` → NumPy array of shape (N, 8192)
-- Failed material IDs printed in terminal
-
-## Notes
-- Large dataset may take time depending on API limits
-- Consider batching for very large runs
+- Trained models (.pkl)
+- Prediction CSVs
+- Performance metrics printed in console
